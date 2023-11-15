@@ -1,28 +1,26 @@
 `include "adder.v"
 
-module adder_TB();
+module add_TB();
 
-    reg [7:0] operand_1, operand_2;
-    wire [7:0] result; 
-    wire co;
+    reg [31:0] operand_1, operand_2;
+    wire [31:0] result; 
     
-    fulladder fullAdder_instance(operand_1, operand_2, co, result);
+    add fullAdder_instance(operand_1, operand_2, result);
 
     initial begin
-        $dumpfile("adderTB.vcd");
-        $dumpvars(0, adder_TB);
+        $dumpfile("addTB.vcd");
+        $dumpvars(0, add_TB);
 
-        #10
-        operand_1 = 2;
-        operand_2 = 3;
         #10;
-        operand_1 = 12;
-        operand_2 = 3;
+        operand_1 = 32'b10000000000000000000000010000;
+        operand_2 = 32'b00000000000000000000000000010;
         #10;
-        operand_1 = 0;
-        operand_2 = 1;
+        operand_1 = 32'b10000000000000000000000010000;
+        operand_2 = 32'b10000000000000000000000000010;
         #10;
-        
+        operand_1 = 32'b00000000000000000000000010000;
+        operand_2 = 32'b00000000000000000000000000010;
+        #10;
     end
 
 endmodule
