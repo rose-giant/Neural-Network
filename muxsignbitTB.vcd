@@ -1,0 +1,42 @@
+$date
+	Wed Nov 15 00:11:26 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_sign_bit_TB $end
+$var wire 1 ! mux_out $end
+$var reg 1 " I0 $end
+$var reg 1 # I1 $end
+$var reg 1 $ S $end
+$scope module mux_sign_bit_instance $end
+$var wire 1 " I0 $end
+$var wire 1 # I1 $end
+$var wire 1 $ S $end
+$var reg 1 ! mux_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#10
+1#
+#20
+1!
+1$
+#40
+0!
+0#
+0$
+#50

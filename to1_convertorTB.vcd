@@ -1,0 +1,39 @@
+$date
+	Wed Nov 15 00:45:33 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module to1_convertor_TB $end
+$var wire 1 ! converted_out $end
+$var reg 7 " port_in [6:0] $end
+$scope module to1_convertor_instance $end
+$var wire 1 ! converted_out $end
+$var wire 7 # port_in [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx #
+bx "
+x!
+$end
+#10
+1!
+b1000110 "
+b1000110 #
+#20
+b1100110 "
+b1100110 #
+#30
+0!
+b0 "
+b0 #
+#40

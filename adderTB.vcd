@@ -1,0 +1,56 @@
+$date
+	Tue Nov 14 23:47:15 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adder_TB $end
+$var wire 8 ! result [7:0] $end
+$var wire 1 " co $end
+$var reg 8 # operand_1 [7:0] $end
+$var reg 8 $ operand_2 [7:0] $end
+$scope module fullAdder_instance $end
+$var wire 8 % a [7:0] $end
+$var wire 8 & b [7:0] $end
+$var reg 1 " c_out $end
+$var reg 8 ' sum [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx '
+bx &
+bx %
+bx $
+bx #
+x"
+bx !
+$end
+#10
+0"
+b101 !
+b101 '
+b11 $
+b11 &
+b10 #
+b10 %
+#20
+b1111 !
+b1111 '
+b1100 #
+b1100 %
+#30
+b1 !
+b1 '
+b1 $
+b1 &
+b0 #
+b0 %
+#40
