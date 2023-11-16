@@ -1,5 +1,5 @@
 $date
-	Wed Nov 15 00:11:26 2023
+	Thu Nov 16 08:09:18 2023
 $end
 $version
 	Icarus Verilog
@@ -8,15 +8,12 @@ $timescale
 	1s
 $end
 $scope module mux_sign_bit_TB $end
-$var wire 1 ! mux_out $end
-$var reg 1 " I0 $end
-$var reg 1 # I1 $end
-$var reg 1 $ S $end
+$var wire 32 ! mux_out [31:0] $end
+$var reg 32 " I1 [31:0] $end
 $scope module mux_sign_bit_instance $end
-$var wire 1 " I0 $end
-$var wire 1 # I1 $end
-$var wire 1 $ S $end
-$var reg 1 ! mux_out $end
+$var wire 32 # I1 [31:0] $end
+$var reg 32 $ I0 [31:0] $end
+$var reg 32 % mux_out [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -25,18 +22,25 @@ $dumpall
 $end
 #0
 $dumpvars
-0$
-0#
-0"
-0!
+b111110010011001100110011001101 %
+b0 $
+b111110010011001100110011001101 #
+b111110010011001100110011001101 "
+b111110010011001100110011001101 !
 $end
 #10
-1#
+b0 !
+b0 %
+b10111110010011001100110011001101 "
+b10111110010011001100110011001101 #
 #20
-1!
-1$
+b111110010011001100110011001101 !
+b111110010011001100110011001101 %
+b111110010011001100110011001101 "
+b111110010011001100110011001101 #
+#30
+b0 !
+b0 %
+b10111110010011001100110011001101 "
+b10111110010011001100110011001101 #
 #40
-0!
-0#
-0$
-#50

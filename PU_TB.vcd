@@ -1,5 +1,5 @@
 $date
-	Wed Nov 15 23:39:49 2023
+	Thu Nov 16 07:12:48 2023
 $end
 $version
 	Icarus Verilog
@@ -8,160 +8,331 @@ $timescale
 	1s
 $end
 $scope module PU_TB $end
-$var wire 32 ! result [31:0] $end
-$var reg 32 " w1 [31:0] $end
-$var reg 32 # w2 [31:0] $end
-$var reg 32 $ w3 [31:0] $end
-$var reg 32 % w4 [31:0] $end
-$var reg 32 & x1 [31:0] $end
-$var reg 32 ' x2 [31:0] $end
-$var reg 32 ( x3 [31:0] $end
-$var reg 32 ) x4 [31:0] $end
+$var wire 32 ! pu_4_out [31:0] $end
+$var wire 32 " pu_3_out [31:0] $end
+$var wire 32 # pu_2_out [31:0] $end
+$var wire 32 $ pu_1_out [31:0] $end
+$var reg 1 % clk $end
+$var reg 1 & rst $end
+$var reg 32 ' x1 [31:0] $end
+$var reg 32 ( x2 [31:0] $end
+$var reg 32 ) x3 [31:0] $end
+$var reg 32 * x4 [31:0] $end
 $scope module PU_instance $end
-$var wire 32 * w1 [31:0] $end
-$var wire 32 + w2 [31:0] $end
-$var wire 32 , w3 [31:0] $end
-$var wire 32 - w4 [31:0] $end
-$var wire 32 . x1 [31:0] $end
-$var wire 32 / x2 [31:0] $end
-$var wire 32 0 x3 [31:0] $end
-$var wire 32 1 x4 [31:0] $end
-$var wire 32 2 result [31:0] $end
+$var wire 1 % clk $end
+$var wire 1 & rst $end
+$var wire 32 + x1 [31:0] $end
+$var wire 32 , x2 [31:0] $end
+$var wire 32 - x3 [31:0] $end
+$var wire 32 . x4 [31:0] $end
+$var wire 32 / pu_4_out [31:0] $end
+$var wire 32 0 pu_3_out [31:0] $end
+$var wire 32 1 pu_2_out [31:0] $end
+$var wire 32 2 pu_1_out [31:0] $end
 $var wire 32 3 mult_4_out [31:0] $end
 $var wire 32 4 mult_3_out [31:0] $end
 $var wire 32 5 mult_2_out [31:0] $end
 $var wire 32 6 mult_1_out [31:0] $end
-$var wire 32 7 adder_2_out [31:0] $end
-$var wire 32 8 adder_1_out [31:0] $end
-$scope module add_instance1 $end
-$var wire 32 9 src2 [31:0] $end
-$var wire 32 : src1 [31:0] $end
-$var reg 8 ; exponent_1 [7:0] $end
-$var reg 8 < exponent_2 [7:0] $end
-$var reg 8 = exponent_Ans [7:0] $end
-$var reg 67 > fraction_1 [66:0] $end
-$var reg 67 ? fraction_2 [66:0] $end
-$var reg 67 @ fraction_Ans [66:0] $end
-$var reg 1 A guard_bit $end
-$var reg 32 B out [31:0] $end
-$var reg 1 C round_bit $end
-$var reg 1 D sign_1 $end
-$var reg 1 E sign_2 $end
-$var reg 1 F sign_Ans $end
-$var reg 1 G sticky_bit $end
-$var reg 67 H sum [66:0] $end
+$var wire 32 7 adder_8_out [31:0] $end
+$var wire 32 8 adder_7_out [31:0] $end
+$var wire 32 9 adder_6_out [31:0] $end
+$var wire 32 : adder_5_out [31:0] $end
+$var wire 32 ; adder_4_out [31:0] $end
+$var wire 32 < adder_3_out [31:0] $end
+$var wire 32 = adder_2_out [31:0] $end
+$var wire 32 > adder_1_out [31:0] $end
+$var reg 32 ? epsilon [31:0] $end
+$scope module add1_1 $end
+$var wire 32 @ src1 [31:0] $end
+$var wire 32 A src2 [31:0] $end
+$var reg 8 B exponent_1 [7:0] $end
+$var reg 8 C exponent_2 [7:0] $end
+$var reg 8 D exponent_Ans [7:0] $end
+$var reg 67 E fraction_1 [66:0] $end
+$var reg 67 F fraction_2 [66:0] $end
+$var reg 67 G fraction_Ans [66:0] $end
+$var reg 1 H guard_bit $end
+$var reg 32 I out [31:0] $end
+$var reg 1 J round_bit $end
+$var reg 1 K sign_1 $end
+$var reg 1 L sign_2 $end
+$var reg 1 M sign_Ans $end
+$var reg 1 N sticky_bit $end
+$var reg 67 O sum [66:0] $end
 $upscope $end
-$scope module add_instance2 $end
-$var wire 32 I src2 [31:0] $end
-$var wire 32 J src1 [31:0] $end
-$var reg 8 K exponent_1 [7:0] $end
-$var reg 8 L exponent_2 [7:0] $end
-$var reg 8 M exponent_Ans [7:0] $end
-$var reg 67 N fraction_1 [66:0] $end
-$var reg 67 O fraction_2 [66:0] $end
-$var reg 67 P fraction_Ans [66:0] $end
-$var reg 1 Q guard_bit $end
-$var reg 32 R out [31:0] $end
-$var reg 1 S round_bit $end
-$var reg 1 T sign_1 $end
-$var reg 1 U sign_2 $end
-$var reg 1 V sign_Ans $end
-$var reg 1 W sticky_bit $end
-$var reg 67 X sum [66:0] $end
+$scope module add1_2 $end
+$var wire 32 P src1 [31:0] $end
+$var wire 32 Q src2 [31:0] $end
+$var reg 8 R exponent_1 [7:0] $end
+$var reg 8 S exponent_2 [7:0] $end
+$var reg 8 T exponent_Ans [7:0] $end
+$var reg 67 U fraction_1 [66:0] $end
+$var reg 67 V fraction_2 [66:0] $end
+$var reg 67 W fraction_Ans [66:0] $end
+$var reg 1 X guard_bit $end
+$var reg 32 Y out [31:0] $end
+$var reg 1 Z round_bit $end
+$var reg 1 [ sign_1 $end
+$var reg 1 \ sign_2 $end
+$var reg 1 ] sign_Ans $end
+$var reg 1 ^ sticky_bit $end
+$var reg 67 _ sum [66:0] $end
 $upscope $end
-$scope module add_instance3 $end
-$var wire 32 Y src1 [31:0] $end
-$var wire 32 Z src2 [31:0] $end
-$var reg 8 [ exponent_1 [7:0] $end
-$var reg 8 \ exponent_2 [7:0] $end
-$var reg 8 ] exponent_Ans [7:0] $end
-$var reg 67 ^ fraction_1 [66:0] $end
-$var reg 67 _ fraction_2 [66:0] $end
-$var reg 67 ` fraction_Ans [66:0] $end
-$var reg 1 a guard_bit $end
-$var reg 32 b out [31:0] $end
-$var reg 1 c round_bit $end
-$var reg 1 d sign_1 $end
-$var reg 1 e sign_2 $end
-$var reg 1 f sign_Ans $end
-$var reg 1 g sticky_bit $end
-$var reg 67 h sum [66:0] $end
+$scope module add1_3 $end
+$var wire 32 ` src1 [31:0] $end
+$var wire 32 a src2 [31:0] $end
+$var reg 8 b exponent_1 [7:0] $end
+$var reg 8 c exponent_2 [7:0] $end
+$var reg 8 d exponent_Ans [7:0] $end
+$var reg 67 e fraction_1 [66:0] $end
+$var reg 67 f fraction_2 [66:0] $end
+$var reg 67 g fraction_Ans [66:0] $end
+$var reg 1 h guard_bit $end
+$var reg 32 i out [31:0] $end
+$var reg 1 j round_bit $end
+$var reg 1 k sign_1 $end
+$var reg 1 l sign_2 $end
+$var reg 1 m sign_Ans $end
+$var reg 1 n sticky_bit $end
+$var reg 67 o sum [66:0] $end
 $upscope $end
-$scope module multiply_instance1 $end
-$var wire 1 i Exception $end
-$var wire 1 j Overflow $end
-$var wire 32 k a_operand [31:0] $end
-$var wire 32 l b_operand [31:0] $end
-$var wire 1 m sign $end
-$var wire 1 n zero $end
-$var wire 9 o sum_exponent [8:0] $end
-$var wire 32 p result [31:0] $end
-$var wire 1 q product_round $end
-$var wire 48 r product_normalised [47:0] $end
-$var wire 23 s product_mantissa [22:0] $end
-$var wire 48 t product [47:0] $end
-$var wire 24 u operand_b [23:0] $end
-$var wire 24 v operand_a [23:0] $end
-$var wire 1 w normalised $end
-$var wire 9 x exponent [8:0] $end
-$var wire 1 y Underflow $end
+$scope module add1_4 $end
+$var wire 32 p src1 [31:0] $end
+$var wire 32 q src2 [31:0] $end
+$var reg 8 r exponent_1 [7:0] $end
+$var reg 8 s exponent_2 [7:0] $end
+$var reg 8 t exponent_Ans [7:0] $end
+$var reg 67 u fraction_1 [66:0] $end
+$var reg 67 v fraction_2 [66:0] $end
+$var reg 67 w fraction_Ans [66:0] $end
+$var reg 1 x guard_bit $end
+$var reg 32 y out [31:0] $end
+$var reg 1 z round_bit $end
+$var reg 1 { sign_1 $end
+$var reg 1 | sign_2 $end
+$var reg 1 } sign_Ans $end
+$var reg 1 ~ sticky_bit $end
+$var reg 67 !" sum [66:0] $end
 $upscope $end
-$scope module multiply_instance2 $end
-$var wire 1 z Exception $end
-$var wire 1 { Overflow $end
-$var wire 32 | a_operand [31:0] $end
-$var wire 32 } b_operand [31:0] $end
-$var wire 1 ~ sign $end
-$var wire 1 !" zero $end
-$var wire 9 "" sum_exponent [8:0] $end
-$var wire 32 #" result [31:0] $end
-$var wire 1 $" product_round $end
-$var wire 48 %" product_normalised [47:0] $end
-$var wire 23 &" product_mantissa [22:0] $end
-$var wire 48 '" product [47:0] $end
-$var wire 24 (" operand_b [23:0] $end
-$var wire 24 )" operand_a [23:0] $end
-$var wire 1 *" normalised $end
-$var wire 9 +" exponent [8:0] $end
-$var wire 1 ," Underflow $end
+$scope module add2_1 $end
+$var wire 32 "" src1 [31:0] $end
+$var wire 32 #" src2 [31:0] $end
+$var reg 8 $" exponent_1 [7:0] $end
+$var reg 8 %" exponent_2 [7:0] $end
+$var reg 8 &" exponent_Ans [7:0] $end
+$var reg 67 '" fraction_1 [66:0] $end
+$var reg 67 (" fraction_2 [66:0] $end
+$var reg 67 )" fraction_Ans [66:0] $end
+$var reg 1 *" guard_bit $end
+$var reg 32 +" out [31:0] $end
+$var reg 1 ," round_bit $end
+$var reg 1 -" sign_1 $end
+$var reg 1 ." sign_2 $end
+$var reg 1 /" sign_Ans $end
+$var reg 1 0" sticky_bit $end
+$var reg 67 1" sum [66:0] $end
 $upscope $end
-$scope module multiply_instance3 $end
-$var wire 1 -" Exception $end
-$var wire 1 ." Overflow $end
-$var wire 32 /" a_operand [31:0] $end
-$var wire 32 0" b_operand [31:0] $end
-$var wire 1 1" sign $end
-$var wire 1 2" zero $end
-$var wire 9 3" sum_exponent [8:0] $end
-$var wire 32 4" result [31:0] $end
-$var wire 1 5" product_round $end
-$var wire 48 6" product_normalised [47:0] $end
-$var wire 23 7" product_mantissa [22:0] $end
-$var wire 48 8" product [47:0] $end
-$var wire 24 9" operand_b [23:0] $end
-$var wire 24 :" operand_a [23:0] $end
-$var wire 1 ;" normalised $end
-$var wire 9 <" exponent [8:0] $end
-$var wire 1 =" Underflow $end
+$scope module add2_2 $end
+$var wire 32 2" src1 [31:0] $end
+$var wire 32 3" src2 [31:0] $end
+$var reg 8 4" exponent_1 [7:0] $end
+$var reg 8 5" exponent_2 [7:0] $end
+$var reg 8 6" exponent_Ans [7:0] $end
+$var reg 67 7" fraction_1 [66:0] $end
+$var reg 67 8" fraction_2 [66:0] $end
+$var reg 67 9" fraction_Ans [66:0] $end
+$var reg 1 :" guard_bit $end
+$var reg 32 ;" out [31:0] $end
+$var reg 1 <" round_bit $end
+$var reg 1 =" sign_1 $end
+$var reg 1 >" sign_2 $end
+$var reg 1 ?" sign_Ans $end
+$var reg 1 @" sticky_bit $end
+$var reg 67 A" sum [66:0] $end
 $upscope $end
-$scope module multiply_instance4 $end
-$var wire 1 >" Exception $end
-$var wire 1 ?" Overflow $end
-$var wire 32 @" a_operand [31:0] $end
-$var wire 32 A" b_operand [31:0] $end
-$var wire 1 B" sign $end
-$var wire 1 C" zero $end
-$var wire 9 D" sum_exponent [8:0] $end
-$var wire 32 E" result [31:0] $end
-$var wire 1 F" product_round $end
-$var wire 48 G" product_normalised [47:0] $end
-$var wire 23 H" product_mantissa [22:0] $end
-$var wire 48 I" product [47:0] $end
-$var wire 24 J" operand_b [23:0] $end
-$var wire 24 K" operand_a [23:0] $end
-$var wire 1 L" normalised $end
-$var wire 9 M" exponent [8:0] $end
-$var wire 1 N" Underflow $end
+$scope module add2_3 $end
+$var wire 32 B" src1 [31:0] $end
+$var wire 32 C" src2 [31:0] $end
+$var reg 8 D" exponent_1 [7:0] $end
+$var reg 8 E" exponent_2 [7:0] $end
+$var reg 8 F" exponent_Ans [7:0] $end
+$var reg 67 G" fraction_1 [66:0] $end
+$var reg 67 H" fraction_2 [66:0] $end
+$var reg 67 I" fraction_Ans [66:0] $end
+$var reg 1 J" guard_bit $end
+$var reg 32 K" out [31:0] $end
+$var reg 1 L" round_bit $end
+$var reg 1 M" sign_1 $end
+$var reg 1 N" sign_2 $end
+$var reg 1 O" sign_Ans $end
+$var reg 1 P" sticky_bit $end
+$var reg 67 Q" sum [66:0] $end
+$upscope $end
+$scope module add2_4 $end
+$var wire 32 R" src1 [31:0] $end
+$var wire 32 S" src2 [31:0] $end
+$var reg 8 T" exponent_1 [7:0] $end
+$var reg 8 U" exponent_2 [7:0] $end
+$var reg 8 V" exponent_Ans [7:0] $end
+$var reg 67 W" fraction_1 [66:0] $end
+$var reg 67 X" fraction_2 [66:0] $end
+$var reg 67 Y" fraction_Ans [66:0] $end
+$var reg 1 Z" guard_bit $end
+$var reg 32 [" out [31:0] $end
+$var reg 1 \" round_bit $end
+$var reg 1 ]" sign_1 $end
+$var reg 1 ^" sign_2 $end
+$var reg 1 _" sign_Ans $end
+$var reg 1 `" sticky_bit $end
+$var reg 67 a" sum [66:0] $end
+$upscope $end
+$scope module add3_1 $end
+$var wire 32 b" src2 [31:0] $end
+$var wire 32 c" src1 [31:0] $end
+$var reg 8 d" exponent_1 [7:0] $end
+$var reg 8 e" exponent_2 [7:0] $end
+$var reg 8 f" exponent_Ans [7:0] $end
+$var reg 67 g" fraction_1 [66:0] $end
+$var reg 67 h" fraction_2 [66:0] $end
+$var reg 67 i" fraction_Ans [66:0] $end
+$var reg 1 j" guard_bit $end
+$var reg 32 k" out [31:0] $end
+$var reg 1 l" round_bit $end
+$var reg 1 m" sign_1 $end
+$var reg 1 n" sign_2 $end
+$var reg 1 o" sign_Ans $end
+$var reg 1 p" sticky_bit $end
+$var reg 67 q" sum [66:0] $end
+$upscope $end
+$scope module add3_2 $end
+$var wire 32 r" src2 [31:0] $end
+$var wire 32 s" src1 [31:0] $end
+$var reg 8 t" exponent_1 [7:0] $end
+$var reg 8 u" exponent_2 [7:0] $end
+$var reg 8 v" exponent_Ans [7:0] $end
+$var reg 67 w" fraction_1 [66:0] $end
+$var reg 67 x" fraction_2 [66:0] $end
+$var reg 67 y" fraction_Ans [66:0] $end
+$var reg 1 z" guard_bit $end
+$var reg 32 {" out [31:0] $end
+$var reg 1 |" round_bit $end
+$var reg 1 }" sign_1 $end
+$var reg 1 ~" sign_2 $end
+$var reg 1 !# sign_Ans $end
+$var reg 1 "# sticky_bit $end
+$var reg 67 ## sum [66:0] $end
+$upscope $end
+$scope module add3_3 $end
+$var wire 32 $# src2 [31:0] $end
+$var wire 32 %# src1 [31:0] $end
+$var reg 8 &# exponent_1 [7:0] $end
+$var reg 8 '# exponent_2 [7:0] $end
+$var reg 8 (# exponent_Ans [7:0] $end
+$var reg 67 )# fraction_1 [66:0] $end
+$var reg 67 *# fraction_2 [66:0] $end
+$var reg 67 +# fraction_Ans [66:0] $end
+$var reg 1 ,# guard_bit $end
+$var reg 32 -# out [31:0] $end
+$var reg 1 .# round_bit $end
+$var reg 1 /# sign_1 $end
+$var reg 1 0# sign_2 $end
+$var reg 1 1# sign_Ans $end
+$var reg 1 2# sticky_bit $end
+$var reg 67 3# sum [66:0] $end
+$upscope $end
+$scope module add3_4 $end
+$var wire 32 4# src2 [31:0] $end
+$var wire 32 5# src1 [31:0] $end
+$var reg 8 6# exponent_1 [7:0] $end
+$var reg 8 7# exponent_2 [7:0] $end
+$var reg 8 8# exponent_Ans [7:0] $end
+$var reg 67 9# fraction_1 [66:0] $end
+$var reg 67 :# fraction_2 [66:0] $end
+$var reg 67 ;# fraction_Ans [66:0] $end
+$var reg 1 <# guard_bit $end
+$var reg 32 =# out [31:0] $end
+$var reg 1 ># round_bit $end
+$var reg 1 ?# sign_1 $end
+$var reg 1 @# sign_2 $end
+$var reg 1 A# sign_Ans $end
+$var reg 1 B# sticky_bit $end
+$var reg 67 C# sum [66:0] $end
+$upscope $end
+$scope module multiply1_1 $end
+$var wire 1 D# Exception $end
+$var wire 1 E# Overflow $end
+$var wire 32 F# a_operand [31:0] $end
+$var wire 32 G# b_operand [31:0] $end
+$var wire 1 H# sign $end
+$var wire 1 I# zero $end
+$var wire 9 J# sum_exponent [8:0] $end
+$var wire 32 K# result [31:0] $end
+$var wire 1 L# product_round $end
+$var wire 48 M# product_normalised [47:0] $end
+$var wire 23 N# product_mantissa [22:0] $end
+$var wire 48 O# product [47:0] $end
+$var wire 24 P# operand_b [23:0] $end
+$var wire 24 Q# operand_a [23:0] $end
+$var wire 1 R# normalised $end
+$var wire 9 S# exponent [8:0] $end
+$var wire 1 T# Underflow $end
+$upscope $end
+$scope module multiply1_2 $end
+$var wire 1 U# Exception $end
+$var wire 1 V# Overflow $end
+$var wire 32 W# a_operand [31:0] $end
+$var wire 32 X# b_operand [31:0] $end
+$var wire 1 Y# sign $end
+$var wire 1 Z# zero $end
+$var wire 9 [# sum_exponent [8:0] $end
+$var wire 32 \# result [31:0] $end
+$var wire 1 ]# product_round $end
+$var wire 48 ^# product_normalised [47:0] $end
+$var wire 23 _# product_mantissa [22:0] $end
+$var wire 48 `# product [47:0] $end
+$var wire 24 a# operand_b [23:0] $end
+$var wire 24 b# operand_a [23:0] $end
+$var wire 1 c# normalised $end
+$var wire 9 d# exponent [8:0] $end
+$var wire 1 e# Underflow $end
+$upscope $end
+$scope module multiply1_3 $end
+$var wire 1 f# Exception $end
+$var wire 1 g# Overflow $end
+$var wire 32 h# a_operand [31:0] $end
+$var wire 32 i# b_operand [31:0] $end
+$var wire 1 j# sign $end
+$var wire 1 k# zero $end
+$var wire 9 l# sum_exponent [8:0] $end
+$var wire 32 m# result [31:0] $end
+$var wire 1 n# product_round $end
+$var wire 48 o# product_normalised [47:0] $end
+$var wire 23 p# product_mantissa [22:0] $end
+$var wire 48 q# product [47:0] $end
+$var wire 24 r# operand_b [23:0] $end
+$var wire 24 s# operand_a [23:0] $end
+$var wire 1 t# normalised $end
+$var wire 9 u# exponent [8:0] $end
+$var wire 1 v# Underflow $end
+$upscope $end
+$scope module multiply1_4 $end
+$var wire 1 w# Exception $end
+$var wire 1 x# Overflow $end
+$var wire 32 y# a_operand [31:0] $end
+$var wire 32 z# b_operand [31:0] $end
+$var wire 1 {# sign $end
+$var wire 1 |# zero $end
+$var wire 9 }# sum_exponent [8:0] $end
+$var wire 32 ~# result [31:0] $end
+$var wire 1 !$ product_round $end
+$var wire 48 "$ product_normalised [47:0] $end
+$var wire 23 #$ product_mantissa [22:0] $end
+$var wire 48 $$ product [47:0] $end
+$var wire 24 %$ operand_b [23:0] $end
+$var wire 24 &$ operand_a [23:0] $end
+$var wire 1 '$ normalised $end
+$var wire 9 ($ exponent [8:0] $end
+$var wire 1 )$ Underflow $end
 $upscope $end
 $upscope $end
 $upscope $end
@@ -171,38 +342,189 @@ $dumpall
 $end
 #0
 $dumpvars
+x)$
+bx ($
+x'$
+bx &$
+b110011001100110011001101 %$
+bx $$
+bx #$
+bx "$
+x!$
+bx ~#
+bx }#
+x|#
+x{#
+b111110010011001100110011001101 z#
+bx y#
+xx#
+xw#
+xv#
+bx u#
+xt#
+bx s#
+b110011001100110011001101 r#
+bx q#
+bx p#
+bx o#
+xn#
+bx m#
+bx l#
+xk#
+xj#
+b111110010011001100110011001101 i#
+bx h#
+xg#
+xf#
+xe#
+bx d#
+xc#
+bx b#
+b110011001100110011001101 a#
+bx `#
+bx _#
+bx ^#
+x]#
+bx \#
+bx [#
+xZ#
+xY#
+b111110010011001100110011001101 X#
+bx W#
+xV#
+xU#
+xT#
+bx S#
+xR#
+bx Q#
+b110011001100110011001101 P#
+bx O#
+bx N#
+bx M#
+xL#
+bx K#
+bx J#
+xI#
+xH#
+b111110010011001100110011001101 G#
+bx F#
+xE#
+xD#
+bx C#
+xB#
+xA#
+x@#
+x?#
+x>#
+bx =#
+x<#
+bx ;#
+bx :#
+bx 9#
+bx 8#
+bx 7#
+bx 6#
+bx 5#
+bx 4#
+bx 3#
+x2#
+x1#
+x0#
+x/#
+x.#
+bx -#
+x,#
+bx +#
+bx *#
+bx )#
+bx (#
+bx '#
+bx &#
+bx %#
+bx $#
+bx ##
+x"#
+x!#
+x~"
+x}"
+x|"
+bx {"
+xz"
+bx y"
+bx x"
+bx w"
+bx v"
+bx u"
+bx t"
+bx s"
+bx r"
+bx q"
+xp"
+xo"
+xn"
+xm"
+xl"
+bx k"
+xj"
+bx i"
+bx h"
+bx g"
+bx f"
+bx e"
+bx d"
+bx c"
+bx b"
+bx a"
+x`"
+x_"
+x^"
+x]"
+x\"
+bx ["
+xZ"
+bx Y"
+bx X"
+bx W"
+bx V"
+bx U"
+bx T"
+bx S"
+bx R"
+bx Q"
+xP"
+xO"
 xN"
-bx M"
+xM"
 xL"
 bx K"
-bx J"
+xJ"
 bx I"
 bx H"
 bx G"
-xF"
+bx F"
 bx E"
 bx D"
-xC"
-xB"
+bx C"
+bx B"
 bx A"
-bx @"
+x@"
 x?"
 x>"
 x="
-bx <"
-x;"
-bx :"
+x<"
+bx ;"
+x:"
 bx 9"
 bx 8"
 bx 7"
 bx 6"
-x5"
+bx 5"
 bx 4"
 bx 3"
-x2"
-x1"
-bx 0"
-bx /"
+bx 2"
+bx 1"
+x0"
+x/"
 x."
 x-"
 x,"
@@ -213,74 +535,74 @@ bx ("
 bx '"
 bx &"
 bx %"
-x$"
+bx $"
 bx #"
 bx ""
-x!"
+bx !"
 x~
-bx }
-bx |
+x}
+x|
 x{
 xz
-xy
-bx x
-xw
+bx y
+xx
+bx w
 bx v
 bx u
 bx t
 bx s
 bx r
-xq
+bx q
 bx p
 bx o
 xn
 xm
-bx l
-bx k
+xl
+xk
 xj
-xi
-bx h
-xg
-xf
-xe
-xd
-xc
+bx i
+xh
+bx g
+bx f
+bx e
+bx d
+bx c
 bx b
-xa
+bx a
 bx `
 bx _
-bx ^
-bx ]
-bx \
-bx [
-bx Z
+x^
+x]
+x\
+x[
+xZ
 bx Y
-bx X
-xW
-xV
-xU
-xT
-xS
+xX
+bx W
+bx V
+bx U
+bx T
+bx S
 bx R
-xQ
+bx Q
 bx P
 bx O
-bx N
-bx M
-bx L
-bx K
-bx J
+xN
+xM
+xL
+xK
+xJ
 bx I
-bx H
-xG
-xF
-xE
-xD
-xC
+xH
+bx G
+bx F
+bx E
+bx D
+bx C
 bx B
-xA
+bx A
 bx @
-bx ?
+b111110010011001100110011001101 ?
 bx >
 bx =
 bx <
@@ -305,226 +627,292 @@ bx *
 bx )
 bx (
 bx '
-bx &
-bx %
+x&
+x%
 bx $
 bx #
 bx "
 bx !
 $end
 #10
-0c
-0a
-b10100101000010011000000000000000000000000000000000000000000000 h
-b101001010000100110000000000000000000000000000000000000000000000000 `
-0C
-0A
-b0 H
-b0 @
-0S
-0Q
-b10001010010100001001100000000000000000000000000000000000000000000 X
-b100010100101000010011000000000000000000000000000000000000000000000 P
-b11111101 ]
-b1 \
-b1 [
-b0 M
-b1 L
-b1 K
-1,"
-1y
-b1 =
-b1 <
-b1 ;
-1N"
-02"
-0!"
-0n
-0C"
-0="
-0?"
-b10001010010100001001100 7"
+0l"
+0j"
+b110011001100110011001101000000000000000000000000000000000000000000 q"
+b110011001100110011001101000000000000000000000000000000000000000000 i"
+0|"
+0z"
+b110011001100110011001101000000000000000000000000000000000000000000 ##
+b110011001100110011001101000000000000000000000000000000000000000000 y"
+0.#
+0,#
+b110011001100110011001101000000000000000000000000000000000000000000 3#
+b110011001100110011001101000000000000000000000000000000000000000000 +#
+0>#
+0<#
+b110011001100110011001101000000000000000000000000000000000000000000 C#
+b110011001100110011001101000000000000000000000000000000000000000000 ;#
+b1111111 f"
+b1111110 d"
+b1111111 v"
+b1111110 t"
+b1111111 (#
+b1111110 &#
+b1111111 8#
+b1111110 6#
+0I#
+0Z#
+0k#
+0|#
+0T#
+0e#
+0v#
+0)$
+b110011001100110011010 N#
+0E#
+b110011001100110011010 _#
+0V#
+b110011001100110011010 p#
+0g#
+b110011001100110011010 #$
+0x#
+1L#
+1]#
+1n#
+1!$
+0m"
+0}"
+0/#
+0?#
+b111111000110011001100110011010 6
+b111111000110011001100110011010 c"
+b111111000110011001100110011010 K#
+b1111110 S#
+1R#
+b111111000110011001100110011010 5
+b111111000110011001100110011010 s"
+b111111000110011001100110011010 \#
+b1111110 d#
+1c#
+b111111000110011001100110011010 4
+b111111000110011001100110011010 %#
+b111111000110011001100110011010 m#
+b1111110 u#
+1t#
+b111111000110011001100110011010 3
+b111111000110011001100110011010 5#
+b111111000110011001100110011010 ~#
+b1111110 ($
+1'$
+b100110011001100110011001110000000000000000000000 M#
+b100110011001100110011001110000000000000000000000 ^#
+b100110011001100110011001110000000000000000000000 o#
+b100110011001100110011001110000000000000000000000 "$
+0H#
+0D#
+b100110011001100110011001110000000000000000000000 O#
+b110000000000000000000000 Q#
+0Y#
+0U#
+b100110011001100110011001110000000000000000000000 `#
+b110000000000000000000000 b#
+0j#
+0f#
+b100110011001100110011001110000000000000000000000 q#
+b110000000000000000000000 s#
+0{#
+0w#
+b100110011001100110011001110000000000000000000000 $$
+b110000000000000000000000 &$
+b11111100 J#
+b11111100 [#
+b11111100 l#
+b11111100 }#
+b1000000010000000000000000000000 =
+b1000000010000000000000000000000 +"
+b1000000010000000000000000000000 F#
+00"
+0,"
+0*"
+b110000000000000000000000000000000000000000000000000000000000000000 1"
+0/"
+b110000000000000000000000000000000000000000000000000000000000000000 )"
+b10000000 &"
 0."
-b1010110111100000111 &"
-0{
-b1010110111100000111 s
-0j
-b1101001001110011010010 H"
-b1111110101001010000100110000000 !
-b1111110101001010000100110000000 2
-b1111110101001010000100110000000 b
-0g
-0f
-0e
-0d
-b10100101000010011000000000000000000000000000000000000000000000 _
-b0 ^
-1F"
-15"
-1$"
-1q
-b10100101000010011000 7
-b10100101000010011000 R
-b10100101000010011000 Z
-0W
-0V
-0U
-0T
-b0 O
-b10001010010100001001100000000000000000000000000000000000000000000 N
-b0 8
-b0 B
-b0 Y
-0G
-0F
-0E
-0D
-b0 ?
-b0 >
-b110011001 M"
-0L"
-b0 <"
-1;"
-b111001101 +"
-1*"
-b111001101 x
-1w
-b0 3
-b0 I
-b0 E"
-b10001010010100001001100 4
-b10001010010100001001100 J
-b10001010010100001001100 4"
-b0 5
-b0 9
-b0 #"
-b0 6
-b0 :
-b0 p
-b101101001001110011010001111001100110100100001000 G"
-b110001010010100001001011101001100010000100000000 6"
-b100001010110111100000111010000110011010000100000 %"
-b100001010110111100000111010000110011010000100000 r
-b10110100100111001101000111100110011010010000100 I"
-b100110000000110000100010 J"
-b110001010010100001001011101001100010000100000000 8"
-b111000001010100100010000 9"
-b100001010110111100000111010000110011010000100000 '"
-b111000001010100100010000 ("
-b100001010110111100000111010000110011010000100000 t
-b100110000000110000100010 u
-0B"
-0>"
-b100110000000110000100010 K"
-01"
 0-"
-b111000001010100100010000 :"
+b1111111 %"
+b10000000 $"
+b10000000000000000000000000000000000000000000000000000000000000000 ("
+b100000000000000000000000000000000000000000000000000000000000000000 '"
+b1000000010000000000000000000000 ;
+b1000000010000000000000000000000 ;"
+b1000000010000000000000000000000 W#
+0@"
+0<"
+0:"
+b110000000000000000000000000000000000000000000000000000000000000000 A"
+0?"
+b110000000000000000000000000000000000000000000000000000000000000000 9"
+b10000000 6"
+0>"
+0="
+b1111111 5"
+b10000000 4"
+b10000000000000000000000000000000000000000000000000000000000000000 8"
+b100000000000000000000000000000000000000000000000000000000000000000 7"
+b1000000010000000000000000000000 9
+b1000000010000000000000000000000 K"
+b1000000010000000000000000000000 h#
+0P"
+0L"
+0J"
+b110000000000000000000000000000000000000000000000000000000000000000 Q"
+0O"
+b110000000000000000000000000000000000000000000000000000000000000000 I"
+b10000000 F"
+0N"
+0M"
+b1111111 E"
+b10000000 D"
+b10000000000000000000000000000000000000000000000000000000000000000 H"
+b100000000000000000000000000000000000000000000000000000000000000000 G"
+b111111110011001100110011001101 !
+b111111110011001100110011001101 /
+b111111110011001100110011001101 =#
+0B#
+0A#
+0@#
+b1111111 7#
+b100000000000000000000000000000000000000000000000000000000000000000 :#
+b10011001100110011001101000000000000000000000000000000000000000000 9#
+b1000000010000000000000000000000 7
+b1000000010000000000000000000000 ["
+b1000000010000000000000000000000 y#
+0`"
+0\"
+0Z"
+b110000000000000000000000000000000000000000000000000000000000000000 a"
+0_"
+b110000000000000000000000000000000000000000000000000000000000000000 Y"
+b10000000 V"
+0^"
+0]"
+b1111111 U"
+b10000000 T"
+b10000000000000000000000000000000000000000000000000000000000000000 X"
+b100000000000000000000000000000000000000000000000000000000000000000 W"
+b111111110011001100110011001101 "
+b111111110011001100110011001101 0
+b111111110011001100110011001101 -#
+02#
+01#
+00#
+b1111111 '#
+b100000000000000000000000000000000000000000000000000000000000000000 *#
+b10011001100110011001101000000000000000000000000000000000000000000 )#
+b1000000000000000000000000000000 >
+b1000000000000000000000000000000 I
+b1000000000000000000000000000000 ""
+0N
+0J
+0H
+b1000000000000000000000000000000000000000000000000000000000000000000 O
+0M
+b100000000000000000000000000000000000000000000000000000000000000000 G
+b10000000 D
+0L
+0K
+b1111111 C
+b1111111 B
+b100000000000000000000000000000000000000000000000000000000000000000 F
+b100000000000000000000000000000000000000000000000000000000000000000 E
+b111111110011001100110011001101 #
+b111111110011001100110011001101 1
+b111111110011001100110011001101 {"
+0"#
+0!#
+0~"
+b1111111 u"
+b100000000000000000000000000000000000000000000000000000000000000000 x"
+b10011001100110011001101000000000000000000000000000000000000000000 w"
+b1000000000000000000000000000000 <
+b1000000000000000000000000000000 Y
+b1000000000000000000000000000000 2"
+0^
+0Z
+0X
+b1000000000000000000000000000000000000000000000000000000000000000000 _
+0]
+b100000000000000000000000000000000000000000000000000000000000000000 W
+b10000000 T
+0\
+0[
+b1111111 S
+b1111111 R
+b100000000000000000000000000000000000000000000000000000000000000000 V
+b100000000000000000000000000000000000000000000000000000000000000000 U
+b1000000000000000000000000000000 :
+b1000000000000000000000000000000 i
+b1000000000000000000000000000000 B"
+0n
+0j
+0h
+b1000000000000000000000000000000000000000000000000000000000000000000 o
+0m
+b100000000000000000000000000000000000000000000000000000000000000000 g
+b10000000 d
+0l
+0k
+b1111111 c
+b1111111 b
+b100000000000000000000000000000000000000000000000000000000000000000 f
+b100000000000000000000000000000000000000000000000000000000000000000 e
+b1000000000000000000000000000000 8
+b1000000000000000000000000000000 y
+b1000000000000000000000000000000 R"
 0~
 0z
-b100110000000110000100010 )"
-0m
-0i
-b111000001010100100010000 v
-b11000 D"
-b1111110 3"
-b1001011 ""
-b1001011 o
-b110000110000000110000100010 %
-b110000110000000110000100010 -
-b110000110000000110000100010 A"
-b11111111000001010100100010000 $
-b11111111000001010100100010000 ,
-b11111111000001010100100010000 0"
-b11111111000001010100100010000 #
-b11111111000001010100100010000 +
-b11111111000001010100100010000 }
-b110000110000000110000100010 "
-b110000110000000110000100010 *
-b110000110000000110000100010 l
-b110000110000000110000100010 )
-b110000110000000110000100010 1
-b110000110000000110000100010 @"
-b11111111000001010100100010000 (
-b11111111000001010100100010000 0
-b11111111000001010100100010000 /"
-b110000110000000110000100010 '
-b110000110000000110000100010 /
-b110000110000000110000100010 |
-b11111111000001010100100010000 &
-b11111111000001010100100010000 .
-b11111111000001010100100010000 k
+0x
+b1000000000000000000000000000000000000000000000000000000000000000000 !"
+0}
+b100000000000000000000000000000000000000000000000000000000000000000 w
+b10000000 t
+0|
+0{
+b1111111 s
+b1111111 r
+b100000000000000000000000000000000000000000000000000000000000000000 v
+b100000000000000000000000000000000000000000000000000000000000000000 u
+b111111110011001100110011001101 $
+b111111110011001100110011001101 2
+b111111110011001100110011001101 k"
+0p"
+0o"
+0n"
+b1111111 e"
+b100000000000000000000000000000000000000000000000000000000000000000 h"
+b10011001100110011001101000000000000000000000000000000000000000000 g"
+b111111100000000000000000000000 *
+b111111100000000000000000000000 .
+b111111100000000000000000000000 #"
+b111111100000000000000000000000 3"
+b111111100000000000000000000000 C"
+b111111100000000000000000000000 4#
+b111111100000000000000000000000 )
+b111111100000000000000000000000 -
+b111111100000000000000000000000 A
+b111111100000000000000000000000 Q
+b111111100000000000000000000000 S"
+b111111100000000000000000000000 $#
+b111111100000000000000000000000 (
+b111111100000000000000000000000 ,
+b111111100000000000000000000000 @
+b111111100000000000000000000000 a
+b111111100000000000000000000000 q
+b111111100000000000000000000000 r"
+b111111100000000000000000000000 '
+b111111100000000000000000000000 +
+b111111100000000000000000000000 P
+b111111100000000000000000000000 `
+b111111100000000000000000000000 p
+b111111100000000000000000000000 b"
 #20
-b10100101000010011000000000000000000000000000000000000000000000 ^
-b10100101000010011000 8
-b10100101000010011000 B
-b10100101000010011000 Y
-b0 =
-b10001010010100001001100000000000000000000000000000000000000000000 H
-b100010100101000010011000000000000000000000000000000000000000000000 @
-b1 <
-b1 ;
-b10001010010100001001100000000000000000000000000000000000000000000 >
-b10001010010100001001100 6
-b10001010010100001001100 :
-b10001010010100001001100 p
-b1111110101001010000100110000000 !
-b1111110101001010000100110000000 2
-b1111110101001010000100110000000 b
-b10100101000010011000000000000000000000000000000000000000000000 h
-b101001010000100110000000000000000000000000000000000000000000000000 `
-b11111101 ]
-b1 \
-b1 [
-b0 _
-b0 7
-b0 R
-b0 Z
-b0 X
-b0 P
-b1 M
-b0 N
-b1 L
-b1 K
-b0 4
-b0 J
-b0 4"
-0y
-b1010110111100000111 H"
-1="
-0*"
-b1101001001110011010010 &"
-b10001010010100001001100 s
-1L"
-b100001010110111100000111010000110011010000100000 G"
-b1010110111100000111 7"
-b101101001001110011010001111001100110100100001000 %"
-b110001010010100001001011101001100010000100000000 r
-b100001010110111100000111010000110011010000100000 6"
-b10110100100111001101000111100110011010010000100 '"
-b100110000000110000100010 ("
-b110001010010100001001011101001100010000100000000 t
-b111000001010100100010000 u
-b100001010110111100000111010000110011010000100000 I"
-b111000001010100100010000 K"
-b100001010110111100000111010000110011010000100000 8"
-b100110000000110000100010 :"
-b110011001 +"
-b11000 ""
-b0 x
-b1111110 o
-b111001101 M"
-b1001011 D"
-b111001101 <"
-b1001011 3"
-b110000110000000110000100010 #
-b110000110000000110000100010 +
-b110000110000000110000100010 }
-b11111111000001010100100010000 "
-b11111111000001010100100010000 *
-b11111111000001010100100010000 l
-b11111111000001010100100010000 )
-b11111111000001010100100010000 1
-b11111111000001010100100010000 @"
-b110000110000000110000100010 (
-b110000110000000110000100010 0
-b110000110000000110000100010 /"

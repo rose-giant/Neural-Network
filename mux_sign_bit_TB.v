@@ -2,24 +2,22 @@
 
 module mux_sign_bit_TB();
 
-    reg I0,I1,S;
-    wire mux_out;
+    reg [31:0] I1;
+    wire [31:0] mux_out;
     
-    mux_sign_bit mux_sign_bit_instance(I0, I1, S, mux_out);
+    mux_sign_bit mux_sign_bit_instance(I1, mux_out);
 
     initial begin
         $dumpfile("muxsignbitTB.vcd");
         $dumpvars(0, mux_sign_bit_TB);
 
-        S = 0; I0 = 0; I1 = 0;
+        I1 = 32'b00111110010011001100110011001101;
         #10;
-        I1 = 1; S = 1;
+        I1 = 32'b10111110010011001100110011001101;
         #10;
-        S = 1;I1 = 1;
+        I1 = 32'b00111110010011001100110011001101;
         #10;
-        I1 = 1; S = 1;
-        #10;
-        S = 0; I1 = 0;
+        I1 = 32'b10111110010011001100110011001101;
         #10;
     end
 
