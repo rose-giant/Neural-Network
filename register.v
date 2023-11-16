@@ -2,9 +2,9 @@ module register (reset, CLK, D, Q);
 
     input reset;
     input CLK;
-    input [7:0] D;
-    output [7:0] Q;
-    reg [7:0] Q;
+    input [31:0] D;
+    output [31:0] Q;
+    reg [31:0] Q;
 
     always @(posedge CLK)
 

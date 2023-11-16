@@ -3,8 +3,8 @@
 module register_TB();
 
     reg reset, CLK;
-    reg [7:0] D;
-    wire [7:0] Q;
+    reg [31:0] D;
+    wire [31:0] Q;
 
     register register_instance(reset, CLK, D, Q);
 

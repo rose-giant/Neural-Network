@@ -1,5 +1,5 @@
 $date
-	Tue Nov 14 23:08:31 2023
+	Thu Nov 16 00:47:13 2023
 $end
 $version
 	Icarus Verilog
@@ -8,15 +8,15 @@ $timescale
 	1s
 $end
 $scope module register_TB $end
-$var wire 8 ! Q [7:0] $end
+$var wire 32 ! Q [31:0] $end
 $var reg 1 " CLK $end
-$var reg 8 # D [7:0] $end
+$var reg 32 # D [31:0] $end
 $var reg 1 $ reset $end
 $scope module register_instance $end
 $var wire 1 " CLK $end
-$var wire 8 % D [7:0] $end
+$var wire 32 % D [31:0] $end
 $var wire 1 $ reset $end
-$var reg 8 & Q [7:0] $end
+$var reg 32 & Q [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end

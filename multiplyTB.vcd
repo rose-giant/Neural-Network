@@ -1,0 +1,92 @@
+$date
+	Wed Nov 15 08:13:23 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module multiply_TB $end
+$var wire 32 ! result [31:0] $end
+$var reg 32 " operand_1 [31:0] $end
+$var reg 32 # operand_2 [31:0] $end
+$scope module fullAdder_instance $end
+$var wire 1 $ Exception $end
+$var wire 1 % Overflow $end
+$var wire 32 & a_operand [31:0] $end
+$var wire 32 ' b_operand [31:0] $end
+$var wire 1 ( sign $end
+$var wire 1 ) zero $end
+$var wire 9 * sum_exponent [8:0] $end
+$var wire 32 + result [31:0] $end
+$var wire 1 , product_round $end
+$var wire 48 - product_normalised [47:0] $end
+$var wire 23 . product_mantissa [22:0] $end
+$var wire 48 / product [47:0] $end
+$var wire 24 0 operand_b [23:0] $end
+$var wire 24 1 operand_a [23:0] $end
+$var wire 1 2 normalised $end
+$var wire 9 3 exponent [8:0] $end
+$var wire 1 4 Underflow $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x4
+bx 3
+x2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+x,
+bx +
+bx *
+x)
+x(
+bx '
+bx &
+x%
+x$
+bx #
+bx "
+bx !
+$end
+#10
+14
+0)
+b1010110111100000111 .
+0%
+1,
+b111001101 3
+12
+b0 !
+b0 +
+b100001010110111100000111010000110011010000100000 -
+b100001010110111100000111010000110011010000100000 /
+b100110000000110000100010 0
+0(
+0$
+b111000001010100100010000 1
+b1001011 *
+b110000110000000110000100010 #
+b110000110000000110000100010 '
+b11111111000001010100100010000 "
+b11111111000001010100100010000 &
+#20
+b111101101 3
+b1101011 *
+b10110000110000000110000100010 #
+b10110000110000000110000100010 '
+#30
+b111001101 3
+b1001011 *
+b110000110000000110000100010 #
+b110000110000000110000100010 '
+#40
