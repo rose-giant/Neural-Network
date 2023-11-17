@@ -1,0 +1,62 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "F:\iverilog\lib\ivl\system.vpi";
+:vpi_module "F:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "F:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "F:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "F:\iverilog\lib\ivl\va_math.vpi";
+S_0000015fe6772d20 .scope module, "register" "register" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "in";
+    .port_info 1 /INPUT 1 "ld";
+    .port_info 2 /INPUT 1 "sclr";
+    .port_info 3 /INPUT 1 "clk";
+    .port_info 4 /INPUT 1 "rst";
+    .port_info 5 /OUTPUT 32 "out";
+P_0000015fe67a6960 .param/l "N" 0 2 2, +C4<00000000000000000000000000100000>;
+o0000015fe67a6fd8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000015fe675eee0_0 .net "clk", 0 0, o0000015fe67a6fd8;  0 drivers
+o0000015fe67a7008 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000015fe6772eb0_0 .net "in", 31 0, o0000015fe67a7008;  0 drivers
+o0000015fe67a7038 .functor BUFZ 1, C4<z>; HiZ drive
+v0000015fe6772f50_0 .net "ld", 0 0, o0000015fe67a7038;  0 drivers
+v0000015fe6772ff0_0 .var "out", 31 0;
+o0000015fe67a7098 .functor BUFZ 1, C4<z>; HiZ drive
+v0000015fe6773090_0 .net "rst", 0 0, o0000015fe67a7098;  0 drivers
+o0000015fe67a70c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000015fe675be30_0 .net "sclr", 0 0, o0000015fe67a70c8;  0 drivers
+E_0000015fe67a5d60 .event posedge, v0000015fe6773090_0, v0000015fe675eee0_0;
+    .scope S_0000015fe6772d20;
+T_0 ;
+    %wait E_0000015fe67a5d60;
+    %load/vec4 v0000015fe6773090_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0000015fe6772ff0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0000015fe675be30_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0000015fe6772ff0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0000015fe6772f50_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %load/vec4 v0000015fe6772eb0_0;
+    %assign/vec4 v0000015fe6772ff0_0, 0;
+T_0.4 ;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Register.v";

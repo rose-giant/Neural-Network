@@ -1,3 +1,7 @@
+`include "mux_sign_bit.v"
+`include "PU.v"
+`include "register.v"
+
 module block (input [31:0] x,x2,x3,x4,w1,w2,w3,w4,input mux,clk,rst,output o,output [31:0] xo);
   reg [31:0] d1;
   wire [31:0] d, dm;

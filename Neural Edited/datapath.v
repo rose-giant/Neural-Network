@@ -1,3 +1,7 @@
+
+`include "block.v"
+`include "terminator.v"
+
 module datapath (input clk,rst,m1,m2,m3,m4,input [31:0] x1,x2,x3,x4,output done,output [31:0] out);
 
 	wire [31:0] xo1,xo2,xo3,xo4;

@@ -1,150 +1,180 @@
-module add (
-input [31:0] src1,src2,
-output reg [31:0] out
-);
 
+module add (input [31:0] operand_1, operand_2, output reg [31:0] adder_output);
 
-
-reg [66:0] fraction_1;
-reg [66:0] fraction_2;
-reg [66:0] sum;
-reg [66:0] fraction_Ans;
-reg [7:0]  exponent_1;
-reg [7:0]  exponent_2;
-reg [7:0]  exponent_Ans;
-reg sign_1;
-reg sign_2;
-reg sign_Ans;
-reg guard_bit;
-reg round_bit;
-reg sticky_bit;
-
+reg [66:0] operand_1_fraction, operand_2_fraction, result_fraction, sum;
+reg [7:0]  operand_1_exponent, operand_2_exponent, result_exponent;
+reg operand_1_sign, operand_2_sign, result_sign, guard_bit, round_bit, sticky_bit;
 
 always@(*)
   begin    
 
       begin
-        fraction_1 = {2'd0,src1[22:0],42'd0};
-        fraction_2 = {2'd0,src2[22:0],42'd0};
-        exponent_1 = src1[30:23];
-        exponent_2 = src2[30:23];
-        sign_1     = src1[31];
-        sign_2     = src2[31]; 
+        operand_1_fraction = {2'd0,operand_1[22:0],42'd0};
+        operand_2_fraction = {2'd0,operand_2[22:0],42'd0};
+        operand_1_exponent = operand_1[30:23];
+        operand_2_exponent = operand_2[30:23];
+        operand_1_sign     = operand_1[31];
+        operand_2_sign     = operand_2[31]; 
 
       end
       
       begin
-        if(exponent_1 == 0)begin
-          exponent_1 = 1;
-          fraction_1[65] = 0;   
-        end
+        if(operand_1_exponent == 0)
+        
+          begin
+            operand_1_exponent = 1;
+            operand_1_fraction[65] = 0;   
+          end
+
         else
-          fraction_1[65] = 1;
+          operand_1_fraction[65] = 1;
           
-        if(exponent_2 == 0)begin
-          exponent_2 = 1;
-          fraction_2[65] = 0;
-        end
+        if(operand_2_exponent == 0)
+        
+          begin
+            operand_2_exponent = 1;
+            operand_2_fraction[65] = 0;
+          end
+
         else
-          fraction_2[65] = 1; 
+          operand_2_fraction[65] = 1; 
       end
                   
       begin
-          if((exponent_1 == 0) && (fraction_1 == 0))
+          if((operand_1_exponent == 0) && (operand_1_fraction == 0))
+
             begin
-              sign_Ans     = sign_2;
-              exponent_Ans = exponent_2;
-              fraction_Ans = fraction_2;
+              result_sign     = operand_2_sign;
+              result_exponent = operand_2_exponent;
+              result_fraction = operand_2_fraction;
             end
-          else if((exponent_2 == 0) && (fraction_2 == 0))
+
+          else if((operand_2_exponent == 0) && (operand_2_fraction == 0))
+
             begin
-              sign_Ans     = sign_1;
-              exponent_Ans = exponent_1;
-              fraction_Ans = fraction_1;
+              result_sign     = operand_1_sign;
+              result_exponent = operand_1_exponent;
+              result_fraction = operand_1_fraction;
             end 
-            
       end
       
       begin
-        if(exponent_1 > exponent_2)
+
+        if(operand_1_exponent > operand_2_exponent)
+
           begin
-              fraction_2 = fraction_2 >> (exponent_1 - exponent_2);
-              exponent_Ans = exponent_1;
+              operand_2_fraction = operand_2_fraction >> (operand_1_exponent - operand_2_exponent);
+              result_exponent = operand_1_exponent;
           end
-        else if(exponent_1 < exponent_2)
+
+        else if(operand_1_exponent < operand_2_exponent)
+
           begin
-              fraction_1 = fraction_1 >> (exponent_2 - exponent_1);
-              exponent_Ans = exponent_2;
+              operand_1_fraction = operand_1_fraction >> (operand_2_exponent - operand_1_exponent);
+              result_exponent = operand_2_exponent;
           end
-        else begin
-              exponent_Ans = exponent_1;  
-        end
+
+        else
+
+          begin
+                result_exponent = operand_1_exponent;  
+          end
+
       end
             
       begin
-          if(sign_1 == sign_2)begin
-            fraction_Ans = fraction_1 + fraction_2;
-            sign_Ans = sign_1;
-          end
-          else begin
-            if(fraction_1 >= fraction_2)begin
-              fraction_Ans = fraction_1 - fraction_2;
-              sign_Ans = sign_1;
+          if(operand_1_sign == operand_2_sign)
+          
+            begin
+              result_fraction = operand_1_fraction + operand_2_fraction;
+              result_sign = operand_1_sign;
             end
-            else begin
-              fraction_Ans = fraction_2 - fraction_1;
-              sign_Ans = sign_2;
-            end
+
+          else 
+          
+          begin
+            
+            if(operand_1_fraction >= operand_2_fraction)
+            
+              begin
+                result_fraction = operand_1_fraction - operand_2_fraction;
+                result_sign = operand_1_sign;
+              end
+
+            else 
+            
+              begin
+                result_fraction = operand_2_fraction - operand_1_fraction;
+                result_sign = operand_2_sign;
+              end
           end
           
       end
-      sum = fraction_Ans; 
+      sum = result_fraction; 
      
-      
       begin
-        if(fraction_Ans[66])begin
-          fraction_Ans = fraction_Ans >> 1;
-          exponent_Ans = exponent_Ans + 1;                   
-        end
+
+        if(result_fraction[66])
+        
+          begin
+            result_fraction = result_fraction >> 1;
+            result_exponent = result_exponent + 1;                   
+          end
+
       end
       
       begin
-        if(fraction_Ans[66])begin
-          fraction_Ans = fraction_Ans >> 1;
-          exponent_Ans = exponent_Ans + 1;                
-        end 
-        if(fraction_Ans[65])begin
-        end
-        else if(fraction_Ans[65] == 0)begin
-          while((fraction_Ans[65] == 0) && (fraction_Ans[64:42] > 0))begin
-            fraction_Ans = fraction_Ans << 1;
-            exponent_Ans = exponent_Ans - 1;            
+
+        if(result_fraction[66])
+        
+          begin
+            result_fraction = result_fraction >> 1;
+            result_exponent = result_exponent + 1;                
           end
-        end
+        
+        if(result_fraction[65] == 0)
+        
+          begin
+
+            while((result_fraction[65] == 0) && (result_fraction[64:42] > 0))
+            
+              begin
+                result_fraction = result_fraction << 1;
+                result_exponent = result_exponent - 1;            
+              end
+
+          end
+
       end         
 
       begin
-        guard_bit = fraction_Ans[41]; 
-        round_bit = fraction_Ans[40];
-        if(fraction_Ans[39:0] > 0)
-          sticky_bit = 1;  
+        guard_bit = result_fraction[41]; 
+        round_bit = result_fraction[40];
+
+        if(result_fraction[39:0] > 0)
+          sticky_bit = 1;
+
         else
           sticky_bit = 0;  
                          
-        if(guard_bit && (fraction_Ans[42] | round_bit | sticky_bit))begin
-          fraction_Ans = fraction_Ans + 67'b0000000000000000000000001000000000000000000000000000000000000000000;
-        end
+        if(guard_bit && (result_fraction[42] | round_bit | sticky_bit))
+        
+          begin
+            result_fraction = result_fraction + 67'b0000000000000000000000001000000000000000000000000000000000000000000;
+          end
       end
       
       begin
-         out[22:0]  = fraction_Ans[64:42];
-         out[30:23] = exponent_Ans[7:0];
-         out[31]    = sign_Ans; 
-         if(fraction_Ans == 0) 
-           out = 0;           
-         if(exponent_Ans == 8'b11111111)
-           fraction_Ans = 0;
-           out[22:0]  = fraction_Ans[64:42];
+         adder_output[22:0]  = result_fraction[64:42];
+         adder_output[30:23] = result_exponent[7:0];
+         adder_output[31]    = result_sign;
+
+         if(result_fraction == 0) 
+           adder_output = 0;
+                    
+         if(result_exponent == 8'b11111111)
+           result_fraction = 0;
+           adder_output[22:0]  = result_fraction[64:42];
       end   
         
   end
