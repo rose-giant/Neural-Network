@@ -1,0 +1,78 @@
+{G:/New folder (5)/New folder/terminator.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/terminator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module terminator
+
+Top level modules:
+	terminator
+
+} {} {}} {G:/New folder (5)/New folder/multiplier.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/multiplier.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multiply
+
+Top level modules:
+	multiply
+
+} {} {}} {G:/New folder (5)/New folder/encoder.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/encoder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module encoder
+
+Top level modules:
+	encoder
+
+} {} {}} {G:/New folder (5)/New folder/maxnetTB.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/maxnetTB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module maxnetTB
+
+Top level modules:
+	maxnetTB
+
+} {} {}} {G:/New folder (5)/New folder/block.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/block.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module block
+
+Top level modules:
+	block
+
+} {} {}} {G:/New folder (5)/New folder/controller.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/controller.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} {G:/New folder (5)/New folder/PU.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/PU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PU
+
+Top level modules:
+	PU
+
+} {} {}} {G:/New folder (5)/New folder/datapath.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/datapath.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} {G:/New folder (5)/New folder/adder.v} {1 {vlog -work work -stats=none {G:/New folder (5)/New folder/adder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module add
+
+Top level modules:
+	add
+
+} {} {}} {G:/New folder (5)/CAD_Phase2/Register.v} {1 {vlog -work work -stats=none {G:/New folder (5)/CAD_Phase2/Register.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} {G:/New folder (5)/Neural-Network-main/mux_sign_bit.v} {1 {vlog -work work -stats=none {G:/New folder (5)/Neural-Network-main/mux_sign_bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux2to1
+
+Top level modules:
+	mux2to1
+
+} {} {}}
