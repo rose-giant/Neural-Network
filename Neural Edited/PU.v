@@ -1,5 +1,5 @@
-`include "multiplier.v"
-`include "adder.v"
+// `include "multiplier.v"
+// `include "adder.v"
 
 module PU (input [31:0] xo,x2,x3,x4,w1,w2,w3,w4, output [31:0] af);
 	wire [31:0] h1,h2,h3,h4,a1,a2; 

@@ -15,8 +15,8 @@ datapath DP( clk,rst,m1,m2,m3,m4,  x1,x2,x3,x4, done,  out);
 controller CO( start, rst,clk,done,ready,m1,m2,m3,m4);
   
 endmodule*/
-`include "datapath.v"
-`include "controller.v"
+// `include "datapath.v"
+// `include "controller.v"
 
 module Toplevel(input clk,rst,start,input [31:0] x1,x2,x3,x4, output [31:0] out, output done);
 

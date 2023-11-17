@@ -1,4 +1,4 @@
-`include "encoder.v"
+// `include "encoder.v"
 
 module terminator (input [31:0] x1,x2,x3,x4,input o1,o2,o3,o4,output done,output [31:0] out);
 
